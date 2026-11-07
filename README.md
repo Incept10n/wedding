@@ -23,8 +23,12 @@ npm run preview  # проверить прод-сборку
 
 1. Push в `master` → GitHub Actions собирает образ и пушит `incept1on/wedding:front`
    (workflow `.github/workflows/ci-front.yml`).
-2. Тот же workflow делает `kubectl rollout restart deployment frontend -n wedding`
-   и ждёт завершения rollout.
+2. Rollout в кластере — вручную:
+
+```bash
+kubectl rollout restart deployment frontend -n wedding
+kubectl rollout status deployment frontend -n wedding
+```
 
 Секреты репозитория, без которых CI не отработает:
 
@@ -32,7 +36,6 @@ npm run preview  # проверить прод-сборку
 |---|---|
 | `DOCKER_USERNAME` | логин в Docker Hub |
 | `DOCKER_PASSWORD` | пароль/токен Docker Hub |
-| `KUBE_CONFIG` | base64 kubeconfig для rollout restart |
 
 Инфраструктура (Namespace, Deployment, Service, Certificate, edge-nginx)
 находится в репозитории [Incept10n/inceptech](https://github.com/Incept10n/inceptech):

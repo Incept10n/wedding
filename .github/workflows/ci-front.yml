@@ -1,11 +1,13 @@
 name: Build and Push front to dockerhub
 
-# Build + push в Docker Hub, затем рестарт деплоймента в кластере.
-# Требуемые секреты репозитория: DOCKER_USERNAME, DOCKER_PASSWORD, KUBE_CONFIG.
+# Только сборка и пуш образа. В кластер ничего не деплоим (нет kubectl/KUBE_CONFIG):
+# образ с мутабельным тегом `:front` подхватывается после
+# `kubectl rollout restart deployment frontend -n wedding`.
 #
-# Инфраструктура (Namespace/Deployment/Service) живёт в Incept10n/inceptech,
-# apps/wedding/. Тег `:front` мутабельный, поэтому без rollout restart поды
-# продолжат работать со старым образом.
+# Требуемые секреты репозитория: DOCKER_USERNAME, DOCKER_PASSWORD.
+#
+# Инфраструктура (Namespace/Deployment/Service/Certificate/edge-nginx)
+# живёт в Incept10n/inceptech, apps/wedding/.
 
 on:
   push:
@@ -49,23 +51,3 @@ jobs:
           tags: incept1on/wedding:front
           labels: ${{ steps.meta.outputs.labels }}
           provenance: false
-
-  deploy-front-prod:
-    name: Update k8s wedding front image
-    runs-on: ubuntu-latest
-    needs: build-and-push-front
-    # На PR не деплоим — только сборка.
-    if: github.event_name != 'pull_request'
-    steps:
-      - name: Get kubectl binary
-        uses: tale/kubectl-action@v1
-        with:
-          base64-kube-config: ${{ secrets.KUBE_CONFIG }}
-
-      - name: Restart wedding frontend deployment
-        run: |
-          kubectl rollout restart deployment frontend -n wedding
-
-      - name: Wait for rollout to complete
-        run: |
-          kubectl rollout status deployment frontend -n wedding --timeout=5m

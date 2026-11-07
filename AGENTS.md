@@ -33,7 +33,8 @@ npm run preview
 ## Деплой
 
 `.github/workflows/ci-front.yml`: push в `master` → сборка → `incept1on/wedding:front`
-в Docker Hub → `kubectl rollout restart deployment frontend -n wedding`.
+в Docker Hub. Rollout в кластере — вручную (`kubectl rollout restart deployment
+frontend -n wedding`); в CI kubectl нет намеренно.
 
 Инфраструктура — в `Incept10n/inceptech`, `apps/wedding/`.
 
