@@ -8,7 +8,7 @@ import cocktail from '../assets/icons/cocktail-red.svg'
 import heart from '../assets/icons/heart-red.svg'
 
 const items = [
-  { icon: car, time: '11:30', label: 'Сбор гостей', mod: 'tl--1' },
+  { icon: car, time: '11:40', label: 'Сбор гостей', mod: 'tl--1' },
   { icon: rings, time: '12:00', label: 'Регистрация', mod: 'tl--2' },
   { icon: cocktail, time: '12:30', label: 'Банкет', mod: 'tl--3' },
   { icon: heart, time: '17:30', label: 'Завершение', mod: 'tl--4', break: true },
