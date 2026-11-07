@@ -1,5 +1,6 @@
 import petalsLeft from '../assets/img/petals-left.webp'
 import petalsRight from '../assets/img/petals-chronicle.webp'
+import petalsMobile from '../assets/img/m-photo-right.webp'
 import waveDesktop from '../assets/icons/wavy-desktop.svg'
 import waveMobile from '../assets/icons/wavy-mobile.svg'
 import car from '../assets/icons/car-red.svg'
@@ -24,12 +25,15 @@ export function Chronicle() {
         aria-hidden="true"
       />
 
-      <img
-        className="sec__decor chronicle__petals"
-        src={petalsRight}
-        alt=""
-        aria-hidden="true"
-      />
+      <picture>
+        <source media="(max-width: 900px)" srcSet={petalsMobile} />
+        <img
+          className="sec__decor chronicle__petals"
+          src={petalsRight}
+          alt=""
+          aria-hidden="true"
+        />
+      </picture>
 
       <div className="sec__layer">
         <h2 className="h-script chronicle__head">Хроника праздника</h2>

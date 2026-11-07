@@ -605,9 +605,9 @@ br.only-mobile {
 }
 
 .gifts__icon--house {
-  right: calc(677 * var(--u));
+  right: calc(435 * var(--u));
   left: auto;
-  top: calc(137 * var(--u));
+  top: calc(128 * var(--u));
 }
 
 .gifts__icon--car {
@@ -746,6 +746,7 @@ br.only-mobile {
   }
 
   .hero__rule {
+    left: calc(195 * var(--u));
     top: calc(92 * var(--u));
     height: calc(165 * var(--u));
   }
@@ -856,9 +857,11 @@ br.only-mobile {
   }
 
   .venue__head {
+    left: calc(79 * var(--u));
+    width: calc(234 * var(--u));
     top: 0;
     font-size: calc(24 * var(--u));
-    line-height: 1.836;
+    line-height: 2.194;
   }
 
   .venue__photo {
@@ -896,15 +899,22 @@ br.only-mobile {
     height: calc(516 * var(--u));
   }
 
-  .chronicle__petals,
   .chronicle__petals-left {
     display: none;
   }
 
+  .chronicle__petals {
+    left: calc(18 * var(--u));
+    top: calc(382 * var(--u));
+    width: calc(358 * var(--u));
+  }
+
   .chronicle__head {
+    left: calc(69 * var(--u));
+    width: calc(251 * var(--u));
     top: 0;
     font-size: calc(24 * var(--u));
-    line-height: 1.836;
+    line-height: 2.194;
   }
 
   .chronicle__wave {
@@ -957,9 +967,11 @@ br.only-mobile {
   }
 
   .dress__head {
+    left: calc(129 * var(--u));
+    width: calc(131 * var(--u));
     top: 0;
     font-size: calc(24 * var(--u));
-    line-height: 1.836;
+    line-height: 2.194;
   }
 
   .dress__text {
@@ -995,14 +1007,16 @@ br.only-mobile {
   }
 
   .gifts__decor-right {
-    top: calc(-66 * var(--u));
+    top: calc(291 * var(--u));
     width: calc(185 * var(--u));
   }
 
   .gifts__head {
+    left: calc(140 * var(--u));
+    width: calc(109 * var(--u));
     top: 0;
     font-size: calc(24 * var(--u));
-    line-height: 1.836;
+    line-height: 2.194;
   }
 
   .gifts__text {
@@ -1071,9 +1085,11 @@ br.only-mobile {
   }
 
   .rsvp__head {
+    left: calc(107 * var(--u));
+    width: calc(175 * var(--u));
     top: 0;
     font-size: calc(24 * var(--u));
-    line-height: 1.836;
+    line-height: 2.194;
   }
 
   .rsvp__text {
@@ -1094,8 +1110,10 @@ br.only-mobile {
   }
 
   .closing__head {
+    left: calc(68 * var(--u));
+    width: calc(253 * var(--u));
     top: 0;
     font-size: calc(24 * var(--u));
-    line-height: 1.836;
+    line-height: 2.194;
   }
 }
