@@ -1,12 +1,26 @@
-/**
- * Временная заглушка. Заменяется на реальную вёрстку по макету Figma
- * (workspace «свадьба», файл «сайт»).
- */
+import { useScale } from './lib/useScale'
+import { Hero } from './sections/Hero'
+import { Greeting } from './sections/Greeting'
+import { Venue } from './sections/Venue'
+import { Chronicle } from './sections/Chronicle'
+import { DressCode } from './sections/DressCode'
+import { Gifts } from './sections/Gifts'
+import { Rsvp } from './sections/Rsvp'
+import { Closing } from './sections/Closing'
+
 export default function App() {
+  useScale()
+
   return (
-    <main className="placeholder">
-      <p className="placeholder__kicker">wedding.inceptech.ru</p>
-      <h1 className="placeholder__title">Сайт скоро откроется</h1>
+    <main className="page">
+      <Hero />
+      <Greeting />
+      <Venue />
+      <Chronicle />
+      <DressCode />
+      <Gifts />
+      <Rsvp />
+      <Closing />
     </main>
   )
 }
