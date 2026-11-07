@@ -381,6 +381,7 @@ br.only-mobile {
 
 .venue__head {
   position: absolute;
+  white-space: nowrap;
   left: calc(706 * var(--u));
   width: calc(467 * var(--u));
   top: calc(43 * var(--u));
@@ -441,6 +442,7 @@ br.only-mobile {
 
 .chronicle__head {
   position: absolute;
+  white-space: nowrap;
   left: calc(689 * var(--u));
   width: calc(501 * var(--u));
   top: calc(35 * var(--u));
@@ -514,6 +516,7 @@ br.only-mobile {
 
 .dress__head {
   position: absolute;
+  white-space: nowrap;
   left: calc(809 * var(--u));
   width: calc(262 * var(--u));
   top: calc(40 * var(--u));
@@ -565,6 +568,7 @@ br.only-mobile {
 
 .gifts__head {
   position: absolute;
+  white-space: nowrap;
   left: calc(827 * var(--u));
   width: calc(218 * var(--u));
   top: calc(48 * var(--u));
@@ -679,6 +683,7 @@ br.only-mobile {
 
 .rsvp__head {
   position: absolute;
+  white-space: nowrap;
   left: calc(765 * var(--u));
   width: calc(349 * var(--u));
   top: calc(38 * var(--u));
@@ -703,6 +708,7 @@ br.only-mobile {
 
 .closing__head {
   position: absolute;
+  white-space: nowrap;
   left: calc(691 * var(--u));
   width: calc(505 * var(--u));
   top: calc(55 * var(--u));
