@@ -115,7 +115,9 @@ br.only-mobile {
    Полотно: масштабируется как постер, 1440 / 390
    ============================================================ */
 .page {
-  --u: calc(min(var(--vw), 1440px) / 1440);
+  /* 1u = 1px макета, растягиваем на всю ширину окна: на 1920 макет
+     увеличивается в 1.33 раза, белых полос по бокам нет. */
+  --u: calc(var(--vw) / 1440);
 
   position: relative;
   width: calc(1440 * var(--u));
@@ -182,12 +184,6 @@ br.only-mobile {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.hero__decor {
-  left: 0;
-  top: calc(130 * var(--u));
-  width: calc(937 * var(--u));
 }
 
 .hero__name {
@@ -428,6 +424,12 @@ br.only-mobile {
    ============================================================ */
 .chronicle {
   height: calc(580 * var(--u));
+}
+
+.chronicle__petals-left {
+  left: 0;
+  top: calc(406 * var(--u));
+  width: calc(937 * var(--u));
 }
 
 .chronicle__petals {
@@ -706,7 +708,7 @@ br.only-mobile {
    ============================================================ */
 @media (max-width: 900px) {
   .page {
-    --u: calc(min(var(--vw), 480px) / 390);
+    --u: calc(min(var(--vw), 640px) / 390);
     width: calc(390 * var(--u));
   }
 
@@ -721,10 +723,6 @@ br.only-mobile {
   /* --- hero --- */
   .hero {
     height: calc(844 * var(--u));
-  }
-
-  .hero__decor {
-    display: none;
   }
 
   .hero__name {
@@ -885,7 +883,8 @@ br.only-mobile {
     height: calc(516 * var(--u));
   }
 
-  .chronicle__petals {
+  .chronicle__petals,
+  .chronicle__petals-left {
     display: none;
   }
 

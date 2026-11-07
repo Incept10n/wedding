@@ -1,6 +1,5 @@
 import heroDesktop from '../assets/img/hero-desktop.webp'
 import heroMobile from '../assets/img/hero-mobile.webp'
-import petals from '../assets/img/petals-hero.webp'
 
 export function Hero() {
   return (
@@ -14,8 +13,6 @@ export function Hero() {
           fetchPriority="high"
         />
       </picture>
-
-      <img className="sec__decor hero__decor" src={petals} alt="" aria-hidden="true" />
 
       <div className="sec__layer">
         <p className="hero__name">

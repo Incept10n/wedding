@@ -1,4 +1,5 @@
-import petals from '../assets/img/petals-chronicle.webp'
+import petalsLeft from '../assets/img/petals-left.webp'
+import petalsRight from '../assets/img/petals-chronicle.webp'
 import waveDesktop from '../assets/icons/wavy-desktop.svg'
 import waveMobile from '../assets/icons/wavy-mobile.svg'
 import car from '../assets/icons/car-red.svg'
@@ -17,8 +18,15 @@ export function Chronicle() {
   return (
     <section className="sec chronicle">
       <img
+        className="sec__decor chronicle__petals-left"
+        src={petalsLeft}
+        alt=""
+        aria-hidden="true"
+      />
+
+      <img
         className="sec__decor chronicle__petals"
-        src={petals}
+        src={petalsRight}
         alt=""
         aria-hidden="true"
       />
